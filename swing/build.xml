@@ -1,6 +1,4 @@
 <project name="OpenRocket" basedir=".">
-
-	<property file="resources/build.properties" />
 	
 	<property name="src.dir"    	value="${basedir}/src"/>		<!-- Source directory -->
 	<property name="src-test.dir"	value="${basedir}/test"/>		<!-- Test directory -->
@@ -12,7 +10,9 @@
 	<property name="tmp.dir"	value="${basedir}/tmp"/>		<!-- Temporary directory -->
 	<property name="resources.dir"	value="${basedir}/resources"/>		<!-- Resources directory -->
 	<property name="resources-src.dir"	value="${basedir}/resources-src"/>
-        <property name="core.dir" value="${basedir}/../core"/>
+	<property name="core.dir" value="${basedir}/../core"/>
+
+	<property file="${core.dir}/resources/build.properties" />
 	
 	<!-- Distribution directory, from which stuff is jar'ed -->
 	<property name="classes.dir"    	value="${build.dir}/classes"/> 
@@ -72,7 +72,7 @@
 	<target name="build">
 		<mkdir dir="${classes.dir}"/>
 		<echo level="info">Compiling main classes</echo>
-		<javac debug="true" srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath" includeantruntime="false" source="1.8" target="1.8"/>
+		<javac debug="true" srcdir="${src.dir}" destdir="${classes.dir}" classpathref="classpath" includeantruntime="false" source="17" target="17"/>
 	</target>
 	
 	<!-- Executible Eclipse-Jar-In-Jar style JAR -->
@@ -97,6 +97,11 @@
 			<zipfileset src="${core.dir}/lib/guice-4.2.3-no_aop.jar" />
 			<zipfileset src="${core.dir}/lib/aopalliance.jar"/>
 			<zipfileset src="${core.dir}/lib/commonmark-0.18.1.jar"/>
+			<zipfileset src="${core.dir}/lib/graal-sdk-22.1.0.1.jar"/>
+			<zipfileset src="${core.dir}/lib/js-22.1.0.1.jar"/>
+			<zipfileset src="${core.dir}/lib/js-scriptengine-22.1.0.1.jar"/>
+			<zipfileset src="${core.dir}/lib/regex-22.1.0.1.jar"/>
+			<zipfileset src="${core.dir}/lib/truffle-api-22.1.0.1.jar"/>
 			<zipfileset src="${core.dir}/lib/script-api-1.0.jar"/>
 			<zipfileset src="${lib.dir}/iText-5.0.2.jar"/>
 			<zipfileset src="${core.dir}/lib/istack-commons-runtime.jar"/>

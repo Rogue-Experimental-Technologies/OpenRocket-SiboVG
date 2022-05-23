@@ -9,9 +9,9 @@ addons:
 
 jdk:
   - openjdk11
-  - openjdk13
+  - openjdk17
   - oraclejdk11
-  - oraclejdk13
+  - oraclejdk17
  
 script:
   - "ant -buildfile build.xml clean check jar unittest"
