@@ -1609,7 +1609,7 @@ public class TestRockets {
 		Simulation sim = new Simulation(rocket);
 		ScriptingExtension ext = new ScriptingExtension();
 		ext.setEnabled(true);
-		ext.setLanguage("JavaScript");
+		ext.setLanguage("graal.js");
 		ext.setScript(script);
 		sim.getSimulationExtensions().add(ext);
 		document.addSimulation(sim);

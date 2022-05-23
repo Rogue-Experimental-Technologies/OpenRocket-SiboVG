@@ -48,6 +48,11 @@ public class ScriptingUtil {
 		if (language == null) {
 			return null;
 		}
+
+		// Safe condition for if 'JavaScript' is used instead of graal
+		if (language.equalsIgnoreCase("javascript")) {
+			language = "graal.js";
+		}
 		
 		ScriptEngineManager manager = new ScriptEngineManager();
 		ScriptEngine engine = manager.getEngineByName(language);
@@ -132,7 +137,7 @@ public class ScriptingUtil {
 		/*
 		 * NOTE:  Hash length must be max 80 chars, the max length of a key in a Properties object.
 		 */
-		
+
 		String output;
 		MessageDigest digest;
 		

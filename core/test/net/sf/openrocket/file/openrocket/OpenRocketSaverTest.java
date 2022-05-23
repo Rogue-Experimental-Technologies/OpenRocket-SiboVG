@@ -156,7 +156,7 @@ public class OpenRocketSaverTest {
 	@Test
 	public void testTrustedScriptEnabledOnLoad() {
 		OpenRocketDocument rocketDoc = TestRockets.makeTestRocket_v107_withSimulationExtension("TESTING");
-		injector.getInstance(ScriptingUtil.class).setTrustedScript("JavaScript", "TESTING", true);
+		injector.getInstance(ScriptingUtil.class).setTrustedScript("graal.js", "TESTING", true);
 		StorageOptions options = new StorageOptions();
 		File file = saveRocket(rocketDoc, options);
 		OpenRocketDocument rocketDocLoaded = loadRocket(file.getPath());
