@@ -3,7 +3,7 @@
   <component name="EclipseModuleManager">
     <libelement value="jar://$MODULE_DIR$/lib-extra/RXTXcomm.jar!/" />
     <libelement value="file://$MODULE_DIR$/resources" />
-    <libelement value="jar://$MODULE_DIR$/lib/opencsv-2.3.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/opencsv-5.6.jar!/" />
     <libelement value="jar://$MODULE_DIR$/lib/guice-3.0.jar!/" />
     <libelement value="jar://$MODULE_DIR$/lib/guice-multibindings-3.0.jar!/" />
     <libelement value="jar://$MODULE_DIR$/lib/javax.inject.jar!/" />
@@ -236,7 +236,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/opencsv-4.3.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/opencsv-5.6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
